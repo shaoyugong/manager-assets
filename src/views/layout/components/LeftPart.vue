@@ -1,5 +1,5 @@
 <template>
-  <div>123123123</div>
+  <div>left</div>
 </template>
 
 <script>

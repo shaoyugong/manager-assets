@@ -7,16 +7,16 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/index',
       component: Layout,
       children: [
         {
-          path: 'index',
+          path: '/index',
           component: () => import('@/views/index'),
           name: 'index',
           meta: {
-            title: 'dashboard',
-            icon: 'dashboard',
+            title: 'index',
+            icon: 'index',
             noCache: true
           }
         }
