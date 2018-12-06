@@ -1,12 +1,10 @@
 <template>
   <el-container>
-    <el-header><top-part/></el-header>
+    <el-aside width="15%"><left-part/></el-aside>
     <el-container>
-      <el-aside width="25%"><left-part/></el-aside>
-      <el-container>
-        <el-main><main-part/></el-main>
-        <el-footer><footer-part/></el-footer>
-      </el-container>
+      <el-header><top-part/></el-header>
+      <el-main><main-part/></el-main>
+      <el-footer><footer-part/></el-footer>
     </el-container>
   </el-container>
 </template>
@@ -27,14 +25,14 @@ export default {
 
 <style scoped>
   .el-header, .el-footer {
-    background-color: #B3C0D1;
+    background-color: #fff;
     color: #333;
     text-align: center;
     line-height: 60px;
   }
 
   .el-aside {
-    background-color: #D3DCE6;
+    background-color: rgb(48, 65, 86);
     color: #333;
     text-align: center;
     line-height: 200px;

@@ -24,7 +24,7 @@ export default new Router({
     },
     {
       path: '*',
-      redirect: '/',
+      redirect: '/index',
       hidden: true
     }
   ]
