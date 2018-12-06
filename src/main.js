@@ -7,13 +7,11 @@ import App from './App'
 import router from './router'
 
 Vue.use(ElementUI)
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  render: h => h(App),
-  template: '<App/>'
+  render: h => h(App)
 })
