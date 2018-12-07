@@ -5,6 +5,7 @@ import Layout from '@/views/layout/layout'
 Vue.use(Router)
 
 export default new Router({
+  scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
       path: '/index',
@@ -15,8 +16,8 @@ export default new Router({
           component: () => import('@/views/index'),
           name: 'index',
           meta: {
-            title: 'index',
-            icon: 'index',
+            title: 'home',
+            icon: 'home',
             noCache: true
           }
         }

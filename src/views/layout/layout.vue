@@ -1,7 +1,7 @@
 <template>
-  <el-container>
-    <el-aside width="15%"><left-part/></el-aside>
-    <el-container>
+  <el-container class="app-wrapper">
+    <el-aside class="sidebar-container"><left-part/></el-aside>
+    <el-container class="main-container">
       <el-header><top-part/></el-header>
       <el-main><main-part/></el-main>
       <el-footer><footer-part/></el-footer>
@@ -23,7 +23,29 @@ export default {
 }
 </script>
 
-<style scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
+  @import "~@/assets/css/mixin.scss";
+  .app-wrapper {
+    @include clearfix;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    &.mobile.openSidebar{
+      position: fixed;
+      top: 0;
+    }
+  }
+
+  .drawer-bg {
+    background: #000;
+    opacity: 0.3;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+  }
+
   .el-header, .el-footer {
     background-color: #fff;
     color: #333;
@@ -31,22 +53,11 @@ export default {
     line-height: 60px;
   }
 
-  .el-aside {
-    background-color: rgb(48, 65, 86);
-    color: #333;
-    text-align: center;
-    line-height: 200px;
-  }
-
   .el-main {
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
     line-height: 160px;
-  }
-
-  body > .el-container {
-    margin-bottom: 40px;
   }
 
   .el-container:nth-child(5) .el-aside,
